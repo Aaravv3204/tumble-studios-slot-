@@ -51,13 +51,7 @@
       </video>
       <div class="hero-shade"></div>
 
-      <div class="hero-stickers" aria-hidden="true">
-        <img class="sticker sticker-leaf" src="assets/sym-leaf.png" alt="" width="176" height="248">
-        <img class="sticker sticker-ice" src="assets/sym-ice.png" alt="" width="120" height="110">
-        <img class="sticker sticker-leaf-2" src="assets/sym-leaf.png" alt="" width="176" height="248">
-      </div>
-
-      <div class="hero-content">
+      <div class="wrap hero-content">
         <h1 class="hero-title" id="hero-title" aria-label="Built to tumble.">
           <span class="line" data-cascade aria-hidden="true">Built to</span>
           <span class="line outline" data-cascade aria-hidden="true">tumble.</span>
@@ -93,68 +87,80 @@
     <section class="games section" id="games" aria-labelledby="games-title">
       <div class="wrap">
         <div class="section-head">
-          <div>
-            <p class="kicker">01 · Games</p>
-            <h2 class="section-title" id="games-title">Slots built <span class="outline">in-house.</span></h2>
-          </div>
+          <h2 class="section-title" id="games-title">Slots built <span class="accent">in-house.</span></h2>
           <p class="section-lead">Every title is designed, animated and mathed by our own team. The first three are in production.</p>
         </div>
 
-        <div class="game-layout">
-          <article class="game-card is-featured">
-            <div class="card-art reel" data-reel>
-              <div class="reel-track">
-                <img src="assets/art-day.jpg" alt="The juice mascot at a beach bar in daylight." width="960" height="720">
-                <img src="assets/art-sunset.jpg" alt="The juice mascot at the beach bar at sunset." width="960" height="720" loading="lazy">
-                <img src="assets/art-night.jpg" alt="The juice mascot at the beach bar at night, under lanterns and a full moon." width="960" height="720" loading="lazy">
-              </div>
+        <ul class="game-grid" role="list">
+          <li class="game-card is-featured">
+            <div class="card-art">
+              <img src="assets/art-sunset.jpg" alt="A grinning cartoon glass of orange juice wearing sunglasses, standing at a beach bar at sunset." loading="lazy" width="960" height="720">
               <span class="tag tag-zest">Coming soon</span>
-              <ol class="reel-dots" aria-hidden="true"><li class="is-on"></li><li></li><li></li></ol>
             </div>
-            <img class="stamp" src="assets/maxwin-sign.jpg" alt="Max win $5,000.00 sign from the game." width="640" height="300" loading="lazy">
             <div class="card-body">
               <h3>First title</h3>
-              <p>Our first game. Name, RTP and release date are announced at launch.</p>
-              <ul class="symbols" aria-label="Game symbols">
-                <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="#F4951A" stroke="#140D08" stroke-width="3"/><circle cx="24" cy="24" r="12" fill="#FFD23F"/><path d="M24 12v24M12 24h24M15.5 15.5l17 17M32.5 15.5l-17 17" stroke="#F4951A" stroke-width="2.5"/></svg><span>Orange</span></li>
-                <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30a16 16 0 0 1 32 0z" fill="#FFD23F" stroke="#140D08" stroke-width="3" stroke-linejoin="round"/><path d="M12 30a12 12 0 0 1 24 0z" fill="#FFF6E8"/><path d="M24 18v12M15.5 21.5 24 30l8.5-8.5" stroke="#FFD23F" stroke-width="2.5"/></svg><span>Lemon</span></li>
-                <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" fill="#BFE9FA" stroke="#140D08" stroke-width="3"/><path d="M15 21v-4a2 2 0 0 1 2-2h4" stroke="#FFF6E8" stroke-width="3" stroke-linecap="round"/></svg><span>Ice</span></li>
-                <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38C12 20 24 10 40 9c0 17-10 28-30 29Z" fill="#58C25A" stroke="#140D08" stroke-width="3" stroke-linejoin="round"/><path d="M13 35 36 13" stroke="#2E8A33" stroke-width="2.5" stroke-linecap="round"/></svg><span>Leaf</span></li>
-                <li><svg viewBox="0 0 48 48" aria-hidden="true"><g transform="rotate(-30 24 24)"><rect x="19" y="4" width="10" height="40" rx="5" fill="#FFF6E8" stroke="#140D08" stroke-width="3"/><path d="M19 12h10M19 20h10M19 28h10M19 36h10" stroke="#E23D3D" stroke-width="4"/></g></svg><span>Straw</span></li>
-                <li><img src="assets/mascot-face.jpg" alt="" width="400" height="400" loading="lazy"><span>Mascot</span></li>
-              </ul>
+              <p>Our first game. Name, RTP and max win are announced at launch.</p>
+              <dl class="stats">
+                <div><dt>RTP</dt><dd>TBA</dd></div>
+                <div><dt>Volatility</dt><dd>TBA</dd></div>
+                <div><dt>Max win</dt><dd>TBA</dd></div>
+              </dl>
               <ul class="chips" role="list">
                 <li>Cascading reels</li>
-                <li>Max win $5,000</li>
               </ul>
             </div>
-          </article>
+          </li>
 
-          <aside class="game-side">
-            <p class="kicker">In production</p>
-            <h3>Two more titles</h3>
-            <p>Art and math in progress. Names are announced here first.</p>
-            <ul class="side-list" role="list">
-              <li><img src="assets/logo-mark.png" alt="" width="28" height="30"><span>Second title</span></li>
-              <li><img src="assets/logo-mark.png" alt="" width="28" height="30"><span>Third title</span></li>
-            </ul>
-          </aside>
-        </div>
+          <li class="game-card is-placeholder">
+            <div class="card-art card-art-blank">
+              <img src="assets/logo-mark.png" alt="" width="200" height="216">
+              <span class="tag">In production</span>
+            </div>
+            <div class="card-body">
+              <h3>Second title</h3>
+              <p>Art and math in progress.</p>
+              <dl class="stats">
+                <div><dt>RTP</dt><dd>TBA</dd></div>
+                <div><dt>Volatility</dt><dd>TBA</dd></div>
+                <div><dt>Max win</dt><dd>TBA</dd></div>
+              </dl>
+              <ul class="chips" role="list">
+                <li>Cascading reels</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="game-card is-placeholder">
+            <div class="card-art card-art-blank">
+              <img src="assets/logo-mark.png" alt="" width="200" height="216">
+              <span class="tag">In production</span>
+            </div>
+            <div class="card-body">
+              <h3>Third title</h3>
+              <p>Art and math in progress.</p>
+              <dl class="stats">
+                <div><dt>RTP</dt><dd>TBA</dd></div>
+                <div><dt>Volatility</dt><dd>TBA</dd></div>
+                <div><dt>Max win</dt><dd>TBA</dd></div>
+              </dl>
+              <ul class="chips" role="list">
+                <li>Cascading reels</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
-
-    <div class="band" aria-hidden="true"></div>
 
     <!-- Contact -->
     <section class="contact section" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
         <div class="contact-panel">
-          <img class="peek" src="assets/mascot-face.jpg" alt="" width="400" height="400" loading="lazy">
           <div class="contact-copy">
-            <p class="kicker">02 · Contact</p>
-            <h2 class="section-title" id="contact-title">Get in <span class="outline">touch.</span></h2>
+            <h2 class="section-title" id="contact-title">Get in <span class="accent">touch.</span></h2>
             <p>Operators, aggregators, press, or you'd like to join the team. Same form.</p>
             <a class="contact-email" href="mailto:hello@tumblestudios.com">hello@tumblestudios.com</a>
+            <img class="contact-art" src="assets/art-maxwin.jpg" alt="Max win screen from the first Tumble Studios game: the juice mascot behind a wooden sign reading Max win $5,000.00." loading="lazy" width="960" height="720">
           </div>
 
           <form class="contact-form" action="#" method="post" novalidate>
@@ -192,7 +198,6 @@
   </main>
 
   <footer class="site-footer">
-    <div class="band" aria-hidden="true"></div>
     <div class="wrap footer-grid">
       <div class="footer-brand">
         <a class="brand" href="#top" aria-label="Tumble Studios home">
@@ -220,17 +225,9 @@
         </ul>
       </div>
     </div>
-
-    <div class="footer-ticker">
-      <p class="visually-hidden">&copy; 2026 Tumble Studios. Games are for players 18+. Play responsibly.</p>
-      <div class="ticker-track" aria-hidden="true">
-        <span>&copy; 2026 Tumble Studios</span><span class="age-badge">18+</span><span>Play responsibly</span><span class="dot">·</span>
-        <span>&copy; 2026 Tumble Studios</span><span class="age-badge">18+</span><span>Play responsibly</span><span class="dot">·</span>
-        <span>&copy; 2026 Tumble Studios</span><span class="age-badge">18+</span><span>Play responsibly</span><span class="dot">·</span>
-        <span>&copy; 2026 Tumble Studios</span><span class="age-badge">18+</span><span>Play responsibly</span><span class="dot">·</span>
-        <span>&copy; 2026 Tumble Studios</span><span class="age-badge">18+</span><span>Play responsibly</span><span class="dot">·</span>
-        <span>&copy; 2026 Tumble Studios</span><span class="age-badge">18+</span><span>Play responsibly</span><span class="dot">·</span>
-      </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; 2026 Tumble Studios. Games are for players 18+.</p>
+      <p><span class="age-badge">18+</span> Play responsibly</p>
     </div>
   </footer>
 
