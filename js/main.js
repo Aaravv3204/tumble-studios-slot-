@@ -128,9 +128,6 @@
     return label ? label.textContent.replace(/\s*\(optional\)/, '').trim().toLowerCase() : 'this field';
   }
 
-  var notify = document.querySelector('.notify');
-  if (notify) wireForm(notify, 'You\'re on the list. We\'ll email you when the first game launches.');
-
   var contact = document.querySelector('.contact-form');
   if (contact) wireForm(contact, 'Message sent. We reply within two working days.');
 })();

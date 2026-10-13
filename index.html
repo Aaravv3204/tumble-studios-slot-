@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tumble Studios</title>
-  <meta name="description" content="Tumble Studios is a slot game studio building bright, character-led games with cascading reels. First titles coming soon.">
-  <meta name="theme-color" content="#F4951A">
+  <title>Tumble Studios · Independent slot studio</title>
+  <meta name="description" content="Tumble Studios is an independent slot studio. Character-led games with cascading reels, made in-house. First titles coming soon.">
+  <meta name="theme-color" content="#140D08">
   <link rel="icon" href="assets/logo-mark.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,8 +18,8 @@
   <header class="site-header" id="top">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Tumble Studios home">
-        <img class="brand-mark" src="assets/logo-mark.png" alt="" width="40" height="39">
-        <span class="brand-name">Tumble Studios</span>
+        <img class="brand-mark" src="assets/logo-mark.png" alt="" width="40" height="43">
+        <span class="brand-name">Tumble<span class="brand-dot">·</span>Studios</span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -30,12 +30,9 @@
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="#games">Games</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#how-we-build">How we build</a></li>
-          <li><a href="#partners">Partners</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="btn btn-small btn-solid" href="#contact">Get in touch</a>
+        <a class="btn btn-primary btn-small" href="#contact">Get in touch</a>
       </nav>
     </div>
   </header>
@@ -50,15 +47,15 @@
       <div class="hero-shade"></div>
 
       <div class="wrap hero-content">
+        <p class="chip">Independent slot studio</p>
         <h1 class="hero-title" id="hero-title">
-          <span>Fresh</span>
-          <span>squeezed</span>
-          <span>slots</span>
+          <span>Built to</span>
+          <span class="accent">tumble.</span>
         </h1>
-        <p class="hero-lead">Tumble Studios makes bright, character-led slot games with cascading reels. Our first titles are on the way.</p>
+        <p class="hero-lead">Character-led slot games with cascading reels, designed, animated and mathed in-house. First titles coming soon.</p>
         <div class="hero-actions">
-          <a class="btn btn-solid" href="#games">See what's coming</a>
-          <a class="btn btn-outline" href="#contact">Get in touch</a>
+          <a class="btn btn-primary" href="#games">See the games</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
         </div>
       </div>
 
@@ -68,261 +65,130 @@
       </button>
     </section>
 
-    <!-- Stats strip -->
-    <section class="stats" aria-label="Studio at a glance">
-      <div class="wrap stats-grid">
-        <div class="stat">
-          <strong>3</strong>
-          <span>games in production</span>
-        </div>
-        <div class="stat">
-          <strong>2026</strong>
-          <span>studio founded</span>
-        </div>
-        <div class="stat">
-          <strong>Early 2027</strong>
-          <span>first release</span>
-        </div>
-        <div class="stat">
-          <strong>HTML5</strong>
-          <span>every game, every screen</span>
-        </div>
+    <!-- Marquee strip -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Independent studio</span><img src="assets/logo-mark.png" alt="">
+        <span>Made in-house</span><img src="assets/logo-mark.png" alt="">
+        <span>Cascading reels</span><img src="assets/logo-mark.png" alt="">
+        <span>Coming soon</span><img src="assets/logo-mark.png" alt="">
+        <span>Independent studio</span><img src="assets/logo-mark.png" alt="">
+        <span>Made in-house</span><img src="assets/logo-mark.png" alt="">
+        <span>Cascading reels</span><img src="assets/logo-mark.png" alt="">
+        <span>Coming soon</span><img src="assets/logo-mark.png" alt="">
       </div>
-    </section>
+    </div>
 
     <!-- Games -->
     <section class="games section" id="games" aria-labelledby="games-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 class="section-title" id="games-title">Our games</h2>
-          <p class="section-lead">Every Tumble game starts with a character you want to hang out with, then a mechanic that keeps the reels moving. The first three are in the oven.</p>
+          <h2 class="section-title" id="games-title">Slots built <span class="accent">in-house.</span></h2>
+          <p class="section-lead">Every title is designed, animated and mathed by our own team. The first three are in production.</p>
         </div>
 
         <ul class="game-grid" role="list">
-          <li class="game-tile tile-a">
-            <div class="tile-art tile-art-juice"></div>
-            <div class="tile-body">
-              <span class="tile-status">Coming soon</span>
-              <h3>Juice Rush</h3>
-              <p>Cascading fruit, growing multipliers and a very confident glass of orange juice.</p>
+          <li class="game-card is-featured">
+            <div class="card-art">
+              <img src="assets/art-sunset.jpg" alt="A grinning cartoon glass of orange juice wearing sunglasses, standing at a beach bar at sunset." loading="lazy" width="960" height="720">
+              <span class="tag tag-zest">Coming soon</span>
+            </div>
+            <div class="card-body">
+              <h3>First title</h3>
+              <p>Our first game. Name, RTP and max win are announced at launch.</p>
+              <dl class="stats">
+                <div><dt>RTP</dt><dd>TBA</dd></div>
+                <div><dt>Volatility</dt><dd>TBA</dd></div>
+                <div><dt>Max win</dt><dd>TBA</dd></div>
+              </dl>
+              <ul class="chips" role="list">
+                <li>Cascading reels</li>
+              </ul>
             </div>
           </li>
-          <li class="game-tile tile-b">
-            <div class="tile-art tile-art-tiki"></div>
-            <div class="tile-body">
-              <span class="tile-status">Coming soon</span>
-              <h3>Tiki Nights</h3>
-              <p>A beach bar after dark. Lantern wilds, moonlit free spins and a tumbling bonus round.</p>
-            </div>
-          </li>
-          <li class="game-tile tile-c">
-            <div class="tile-art tile-art-ice"></div>
-            <div class="tile-body">
-              <span class="tile-status">Coming soon</span>
-              <h3>Ice &amp; Zest</h3>
-              <p>Frozen symbols lock in place, then melt into cascades when the heat turns up.</p>
-            </div>
-          </li>
-          <li class="game-tile tile-blank">
-            <div class="tile-body">
-              <span class="tile-status">In the oven</span>
-              <h3>Title four</h3>
-              <p>Concept stage. We'll announce it here first.</p>
-            </div>
-          </li>
-          <li class="game-tile tile-blank">
-            <div class="tile-body">
-              <span class="tile-status">In the oven</span>
-              <h3>Title five</h3>
-              <p>Concept stage. We'll announce it here first.</p>
-            </div>
-          </li>
-          <li class="game-tile tile-blank">
-            <div class="tile-body">
-              <span class="tile-status">In the oven</span>
-              <h3>Title six</h3>
-              <p>Concept stage. We'll announce it here first.</p>
-            </div>
-          </li>
-        </ul>
 
-        <form class="notify" action="#" method="post" aria-labelledby="notify-title">
-          <div>
-            <h3 id="notify-title">Hear about launches first</h3>
-            <p>One email per release. No newsletters, no filler.</p>
-          </div>
-          <div class="notify-row">
-            <label class="visually-hidden" for="notify-email">Email address</label>
-            <input id="notify-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
-            <button class="btn btn-solid" type="submit">Notify me</button>
-          </div>
-          <p class="form-note" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
+          <li class="game-card is-placeholder">
+            <div class="card-art card-art-blank">
+              <img src="assets/logo-mark.png" alt="" width="200" height="216">
+              <span class="tag">In production</span>
+            </div>
+            <div class="card-body">
+              <h3>Second title</h3>
+              <p>Art and math in progress.</p>
+              <dl class="stats">
+                <div><dt>RTP</dt><dd>TBA</dd></div>
+                <div><dt>Volatility</dt><dd>TBA</dd></div>
+                <div><dt>Max win</dt><dd>TBA</dd></div>
+              </dl>
+              <ul class="chips" role="list">
+                <li>Cascading reels</li>
+              </ul>
+            </div>
+          </li>
 
-    <!-- About -->
-    <section class="about section section-dark" id="about" aria-labelledby="about-title">
-      <div class="wrap about-grid">
-        <div class="about-copy">
-          <h2 class="section-title" id="about-title">Who we are</h2>
-          <p>Tumble Studios is a slot game studio founded in 2026. We're a small team of artists, mathematicians and engineers who think a slot should feel like a cartoon you can play: a world with a mood, a character with a face, and reels that never sit still.</p>
-          <p>We build everything in-house, from the first sketch to the certified math model. That keeps the games consistent and means there's one team to call when a partner needs something changed.</p>
-          <a class="btn btn-solid" href="#contact">Talk to the team</a>
-        </div>
-        <figure class="about-figure">
-          <img src="assets/hero-poster.jpg" alt="The Tumble Studios logo surrounded by cartoon oranges, mint leaves and ice cubes on an orange background." loading="lazy" width="1920" height="1080">
-        </figure>
-      </div>
-    </section>
-
-    <!-- How we build -->
-    <section class="pillars section" id="how-we-build" aria-labelledby="pillars-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 class="section-title" id="pillars-title">How we build</h2>
-          <p class="section-lead">Four things every Tumble game has before it ships.</p>
-        </div>
-        <ul class="pillar-grid" role="list">
-          <li class="pillar">
-            <svg class="pillar-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 10h32v8H8zM8 20h32v8H8zM8 30h32v8H8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M24 10v28" stroke="currentColor" stroke-width="3"/></svg>
-            <h3>Cascading reels</h3>
-            <p>Winning symbols clear and new ones tumble in. One spin can keep paying, and every game has its own twist on the fall.</p>
-          </li>
-          <li class="pillar">
-            <svg class="pillar-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="18" cy="21" r="2.5" fill="currentColor"/><circle cx="30" cy="21" r="2.5" fill="currentColor"/><path d="M16 29c2.5 3 5.5 4 8 4s5.5-1 8-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-            <h3>A character in every game</h3>
-            <p>Each title is led by a mascot with a personality, drawn and animated by our own artists. Players remember faces, not paytables.</p>
-          </li>
-          <li class="pillar">
-            <svg class="pillar-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38 20 22l8 9 12-17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10v28h32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-            <h3>In-house math</h3>
-            <p>Volatility, hit rate and RTP are designed alongside the art, not bolted on. Models are built for certification from day one.</p>
-          </li>
-          <li class="pillar">
-            <svg class="pillar-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><rect x="28" y="20" width="14" height="20" rx="3" fill="#FFF6E8" stroke="currentColor" stroke-width="3"/><path d="M18 40h8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-            <h3>Built for every screen</h3>
-            <p>HTML5 games that load fast and play the same on a phone in portrait as on a desktop, with no plugin and no app.</p>
+          <li class="game-card is-placeholder">
+            <div class="card-art card-art-blank">
+              <img src="assets/logo-mark.png" alt="" width="200" height="216">
+              <span class="tag">In production</span>
+            </div>
+            <div class="card-body">
+              <h3>Third title</h3>
+              <p>Art and math in progress.</p>
+              <dl class="stats">
+                <div><dt>RTP</dt><dd>TBA</dd></div>
+                <div><dt>Volatility</dt><dd>TBA</dd></div>
+                <div><dt>Max win</dt><dd>TBA</dd></div>
+              </dl>
+              <ul class="chips" role="list">
+                <li>Cascading reels</li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
     </section>
-
-    <!-- Roadmap -->
-    <section class="roadmap section" aria-labelledby="roadmap-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 class="section-title" id="roadmap-title">The road to launch</h2>
-          <p class="section-lead">Where we are and what comes next.</p>
-        </div>
-        <ol class="timeline">
-          <li class="timeline-step is-done">
-            <span class="step-when">2026</span>
-            <h3>Studio founded</h3>
-            <p>Team assembled, first worlds sketched, engine chosen.</p>
-          </li>
-          <li class="timeline-step is-now">
-            <span class="step-when">Now</span>
-            <h3>Three games in production</h3>
-            <p>Art, animation and math in progress. Partner conversations open.</p>
-          </li>
-          <li class="timeline-step">
-            <span class="step-when">Late 2026</span>
-            <h3>Certification and integration</h3>
-            <p>Lab testing, aggregator integration and operator onboarding.</p>
-          </li>
-          <li class="timeline-step">
-            <span class="step-when">Early 2027</span>
-            <h3>First release</h3>
-            <p>Juice Rush goes live with launch partners.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Partners -->
-    <section class="partners section section-orange" id="partners" aria-labelledby="partners-title">
-      <div class="wrap partners-grid">
-        <div>
-          <h2 class="section-title" id="partners-title">Ready to play?</h2>
-          <p class="section-lead">We're signing launch partners now. Operators and aggregators get early builds, marketing assets and a direct line to the people making the games.</p>
-          <a class="btn btn-dark" href="#contact">Become a launch partner</a>
-        </div>
-        <ul class="partner-perks" role="list">
-          <li>
-            <h3>Early access</h3>
-            <p>Play builds months before release and tell us what your players need.</p>
-          </li>
-          <li>
-            <h3>Launch marketing</h3>
-            <p>Character art, trailers and promo packs for every title, ready on day one.</p>
-          </li>
-          <li>
-            <h3>Simple integration</h3>
-            <p>One API, standard aggregator support, and an engineer who answers the phone.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Marquee -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Tumble</span><span>Cascade</span><span>Win</span><span>Repeat</span>
-        <span>Tumble</span><span>Cascade</span><span>Win</span><span>Repeat</span>
-        <span>Tumble</span><span>Cascade</span><span>Win</span><span>Repeat</span>
-        <span>Tumble</span><span>Cascade</span><span>Win</span><span>Repeat</span>
-      </div>
-    </div>
 
     <!-- Contact -->
     <section class="contact section" id="contact" aria-labelledby="contact-title">
-      <div class="wrap contact-grid">
-        <div class="contact-copy">
-          <h2 class="section-title" id="contact-title">Say hello</h2>
-          <p>Whether you run a casino, an aggregator, or just want to see the games early, we'd like to hear from you. We reply within two working days.</p>
-          <address>
-            <a href="mailto:hello@tumblestudios.com">hello@tumblestudios.com</a>
-          </address>
-        </div>
+      <div class="wrap">
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <h2 class="section-title" id="contact-title">Get in <span class="accent">touch.</span></h2>
+            <p>Operators, aggregators, press, or you'd like to join the team. Same form.</p>
+            <a class="contact-email" href="mailto:hello@tumblestudios.com">hello@tumblestudios.com</a>
+            <img class="contact-art" src="assets/art-maxwin.jpg" alt="Max win screen from the first Tumble Studios game: the juice mascot behind a wooden sign reading Max win $5,000.00." loading="lazy" width="960" height="720">
+          </div>
 
-        <form class="contact-form" action="#" method="post" novalidate>
-          <div class="field">
-            <label for="name">Full name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="company">Company <span class="optional">(optional)</span></label>
-            <input id="company" name="company" type="text" autocomplete="organization">
-          </div>
-          <div class="field">
-            <label for="topic">What is this about?</label>
-            <select id="topic" name="topic" required>
-              <option value="">Choose one</option>
-              <option>Operator partnership</option>
-              <option>Aggregator integration</option>
-              <option>Press and media</option>
-              <option>Careers</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field field-full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <div class="field field-full field-check">
-            <input id="consent" name="consent" type="checkbox" required>
-            <label for="consent">I agree to the <a href="#privacy">privacy policy</a>.</label>
-          </div>
-          <div class="field field-full">
-            <button class="btn btn-solid" type="submit">Send message</button>
-            <p class="form-note" role="status" aria-live="polite"></p>
-          </div>
-        </form>
+          <form class="contact-form" action="#" method="post" novalidate>
+            <div class="field field-full">
+              <label for="topic">What's this about?</label>
+              <select id="topic" name="topic" required>
+                <option value="">Choose one</option>
+                <option>Operator partnership</option>
+                <option>Aggregator integration</option>
+                <option>Press</option>
+                <option>Joining the team</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@domain.com" required>
+            </div>
+            <div class="field field-full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            </div>
+            <div class="field field-full">
+              <button class="btn btn-primary" type="submit">Send message</button>
+              <p class="form-note" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -330,36 +196,34 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo-mark.png" alt="" width="56" height="54">
-        <p>Tumble Studios is a slot game studio building bright, character-led games with cascading reels.</p>
+        <a class="brand" href="#top" aria-label="Tumble Studios home">
+          <img class="brand-mark" src="assets/logo-mark.png" alt="" width="40" height="43">
+          <span class="brand-name">Tumble<span class="brand-dot">·</span>Studios</span>
+        </a>
+        <p>Independent slot studio. First titles coming soon.</p>
+        <ul class="social" role="list">
+          <li><a href="#" aria-label="Tumble Studios on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.3-8.3L1.5 3h6.4l4.4 5.9zm-1.1 16.1h1.7L6.9 4.8H5.1z"/></svg></a></li>
+          <li><a href="#" aria-label="Tumble Studios on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 16.8a31 31 0 0 0 .5-4.8A31 31 0 0 0 23 7.2zM9.8 15.1V8.9l6 3.1z"/></svg></a></li>
+          <li><a href="#" aria-label="Tumble Studios on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a></li>
+        </ul>
       </div>
       <nav aria-label="Footer">
-        <h3>Studio</h3>
+        <h3>The site</h3>
         <ul>
           <li><a href="#games">Games</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#partners">Partners</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div>
-        <h3>Follow</h3>
-        <ul class="social">
-          <li><a href="#" aria-label="Tumble Studios on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 16.8a31 31 0 0 0 .5-4.8A31 31 0 0 0 23 7.2zM9.8 15.1V8.9l6 3.1z"/></svg></a></li>
-          <li><a href="#" aria-label="Tumble Studios on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a></li>
-          <li><a href="#" aria-label="Tumble Studios on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9h3zM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.9c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V19h-3V9h2.9v1.4a3.2 3.2 0 0 1 2.8-1.6c3 0 3.6 2 3.6 4.6z"/></svg></a></li>
-          <li><a href="#" aria-label="Tumble Studios on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.3-8.3L1.5 3h6.4l4.4 5.9zm-1.1 16.1h1.7L6.9 4.8H5.1z"/></svg></a></li>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:hello@tumblestudios.com">hello@tumblestudios.com</a></li>
         </ul>
-      </div>
-      <div class="footer-legal" id="privacy">
-        <h3>Responsible play</h3>
-        <p>Our games are for adults aged 18 and over, or the legal gambling age in your jurisdiction. Play for fun, set a budget, and stop when it stops being fun.</p>
-        <p class="licence-note">Licensing and certification details will be published here before our first release.</p>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <p>&copy; 2026 Tumble Studios. All rights reserved.</p>
-      <p><a href="#privacy">Privacy policy</a></p>
+      <p>&copy; 2026 Tumble Studios. Games are for players 18+.</p>
+      <p><span class="age-badge">18+</span> Play responsibly</p>
     </div>
   </footer>
 
