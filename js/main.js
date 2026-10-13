@@ -49,6 +49,21 @@
     sections.forEach(function (s) { io.observe(s); });
   }
 
+  // --- Headline cascade: split each line into letters that drop in one by one.
+  // The h1 carries aria-label, so the split spans are hidden from screen readers.
+  var cascadeIndex = 0;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-cascade]'), function (line) {
+    var text = line.textContent;
+    line.textContent = '';
+    for (var i = 0; i < text.length; i++) {
+      var span = document.createElement('span');
+      span.className = 'letter';
+      span.textContent = text[i];
+      span.style.setProperty('--i', String(cascadeIndex++));
+      line.appendChild(span);
+    }
+  });
+
   // --- Hero video: pause button, reduced motion, and stop when off screen
   var video = document.querySelector('.hero-video');
   var videoToggle = document.querySelector('.video-toggle');
@@ -84,8 +99,34 @@
     }
   }
 
-  // --- Forms: inline validation and a confirmation message.
-  // There is no backend yet; replace the "submitted" branch with a real request.
+  // --- Reel strip on the game card: advances every few seconds, and on hover
+  var reel = document.querySelector('[data-reel]');
+  if (reel && !reduceMotion.matches) {
+    var track = reel.querySelector('.reel-track');
+    var dots = reel.querySelectorAll('.reel-dots li');
+    var frames = track.children.length;
+    var at = 0;
+    var timer = null;
+
+    function go(n) {
+      at = (n + frames) % frames;
+      track.style.transform = 'translateY(' + (-at * 100 / frames) + '%)';
+      Array.prototype.forEach.call(dots, function (d, i) {
+        d.classList.toggle('is-on', i === at);
+      });
+    }
+
+    function schedule() {
+      clearInterval(timer);
+      timer = setInterval(function () { go(at + 1); }, 3800);
+    }
+
+    reel.addEventListener('mouseenter', function () { go(at + 1); schedule(); });
+    schedule();
+  }
+
+  // --- Contact form: inline validation and a confirmation message.
+  // There is no backend yet; replace the "sent" branch with a real request.
   function wireForm(form, successText) {
     var note = form.querySelector('.form-note');
 
@@ -102,9 +143,7 @@
 
       if (firstBad) {
         note.className = 'form-note is-error';
-        note.textContent = firstBad.type === 'checkbox'
-          ? 'Please agree to the privacy policy to continue.'
-          : 'Please check the highlighted field: ' + labelFor(firstBad) + '.';
+        note.textContent = 'Please check the highlighted field: ' + labelFor(firstBad) + '.';
         firstBad.focus();
         return;
       }
@@ -125,7 +164,7 @@
 
   function labelFor(field) {
     var label = field.id && document.querySelector('label[for="' + field.id + '"]');
-    return label ? label.textContent.replace(/\s*\(optional\)/, '').trim().toLowerCase() : 'this field';
+    return label ? label.textContent.trim().toLowerCase() : 'this field';
   }
 
   var contact = document.querySelector('.contact-form');
