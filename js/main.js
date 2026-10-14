@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  document.documentElement.classList.add('js');
-
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   // --- Mobile nav
@@ -49,22 +47,6 @@
       });
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(function (s) { io.observe(s); });
-  }
-
-  // --- Reveal cards the first time they scroll into view
-  var revealables = document.querySelectorAll('[data-reveal]');
-  if ('IntersectionObserver' in window && !reduceMotion.matches) {
-    var ro = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
-          ro.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -10% 0px' });
-    Array.prototype.forEach.call(revealables, function (el) { ro.observe(el); });
-  } else {
-    Array.prototype.forEach.call(revealables, function (el) { el.classList.add('is-in'); });
   }
 
   // --- Headline cascade: split each line into letters that drop in one by one.
