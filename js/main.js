@@ -74,28 +74,6 @@
     videoToggle.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video');
   }
 
-  // Pick the landscape or portrait set of files for the screen we're on
-  var phone = window.matchMedia('(max-width: 560px)');
-  var currentSet = null;
-
-  function useSet(name) {
-    if (currentSet === name) return;
-    currentSet = name;
-    var wasPaused = video.paused;
-    video.poster = video.getAttribute('data-' + name + '-poster');
-    video.querySelector('source').src = video.getAttribute('data-' + name + '-mp4');
-    video.load();
-    video.muted = true; // autoplay on phones requires muted, keep it set after load()
-    if (!wasPaused) video.play().catch(function () {});
-  }
-
-  if (video) {
-    useSet(phone.matches ? 'mobile' : 'desktop');
-    var onPhoneChange = function (e) { useSet(e.matches ? 'mobile' : 'desktop'); };
-    if (phone.addEventListener) phone.addEventListener('change', onPhoneChange);
-    else phone.addListener(onPhoneChange);
-  }
-
   if (video && videoToggle) {
     var userPaused = false;
 

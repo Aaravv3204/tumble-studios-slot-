@@ -600,17 +600,19 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 @media (max-width: 560px) {
   body { font-size: 1rem; }
   .brand-name { font-size: 1.05rem; }
-  /* phones: full-view hero, portrait video behind the text like on desktop */
-  .hero { min-height: min(88svh, 760px); }
-  .hero-video { object-position: 50% 30%; }
-  .hero-shade {
-    background:
-      linear-gradient(to top, rgba(20, 13, 8, .92) 0%, rgba(20, 13, 8, .55) 40%, rgba(20, 13, 8, 0) 68%);
-  }
-  .hero-content { padding-bottom: 72px; }
-  .hero-title { font-size: clamp(2.8rem, 14vw, 3.6rem); }
-  .video-toggle { width: 40px; height: 40px; right: 12px; top: 12px; bottom: auto; }
-  .hero-actions .btn { width: 100%; }
+  /* phones: landscape video shown whole at 16:9, headline and buttons centred on it */
+  .hero { min-height: 0; aspect-ratio: 16 / 9; align-items: center; }
+  .hero::before, .hero::after { display: none; }
+  .hero-shade { background: rgba(20, 13, 8, .42); }
+  .hero-content { padding-block: 16px; text-align: center; }
+  .hero-title { font-size: clamp(1.9rem, 9vw, 2.4rem); align-items: center; margin-bottom: 14px; text-shadow: 3px 3px 0 rgba(20, 13, 8, .6); }
+  .hero-title .outline { color: var(--zest); -webkit-text-stroke: 0; text-shadow: 3px 3px 0 rgba(20, 13, 8, .6); }
+  .hero-lead { display: none; }
+  .hero-actions { justify-content: center; gap: 10px; }
+  .hero-actions .btn { min-height: 42px; padding: 0 14px; font-size: .8rem; box-shadow: 3px 3px 0 var(--zest), -2px -2px 0 var(--juice); }
+  .video-toggle { width: 34px; height: 34px; right: 10px; bottom: 10px; }
+  .video-toggle svg { width: 16px; height: 16px; }
+  .marquee { margin-top: 0; }
   .game-grid { grid-template-columns: 1fr; gap: 28px; }
   .game-card.is-featured .card-art { aspect-ratio: 4 / 3; }
   .contact-panel { padding: 22px; box-shadow: 6px 6px 0 var(--juice); }
