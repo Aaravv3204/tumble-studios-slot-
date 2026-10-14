@@ -609,7 +609,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   }
   .hero-content { padding-bottom: 72px; }
   .hero-title { font-size: clamp(2.8rem, 14vw, 3.6rem); }
-  .video-toggle { width: 40px; height: 40px; right: 14px; bottom: 60px; }
+  .video-toggle { width: 40px; height: 40px; right: 12px; top: 12px; bottom: auto; }
   .hero-actions .btn { width: 100%; }
   .game-grid { grid-template-columns: 1fr; gap: 28px; }
   .game-card.is-featured .card-art { aspect-ratio: 4 / 3; }
