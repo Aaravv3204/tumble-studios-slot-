@@ -231,7 +231,7 @@ ul[role="list"] { list-style: none; margin: 0; padding: 0; }
   content: "";
   position: absolute;
   left: -2%; right: -2%; bottom: -40px;
-  height: 90px;
+  height: 72px;
   background: var(--bg);
   border-top: 3px solid var(--juice);
   transform: skewY(-1.4deg);
@@ -318,6 +318,7 @@ ul[role="list"] { list-style: none; margin: 0; padding: 0; }
 /* Marquee strip */
 .marquee {
   overflow: hidden;
+  margin-top: 44px; /* clear gap below the hero frame */
   background: var(--ink);
   border-bottom: 2px solid var(--text);
   padding-block: 14px;

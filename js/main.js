@@ -83,9 +83,7 @@
     currentSet = name;
     var wasPaused = video.paused;
     video.poster = video.getAttribute('data-' + name + '-poster');
-    var sources = video.querySelectorAll('source');
-    sources[0].src = video.getAttribute('data-' + name + '-webm');
-    sources[1].src = video.getAttribute('data-' + name + '-mp4');
+    video.querySelector('source').src = video.getAttribute('data-' + name + '-mp4');
     video.load();
     if (!wasPaused) video.play().catch(function () {});
   }
