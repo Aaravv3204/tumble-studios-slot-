@@ -594,7 +594,8 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   /* phones: video sits above the text at full width, nothing covers the mascot */
   .hero { display: block; min-height: 0; }
   .hero::after { display: none; }
-  .hero-video { position: relative; inset: auto; aspect-ratio: 16 / 9; height: auto; border-bottom: 2px solid var(--text); }
+  /* portrait video on phones: shown as a tall 4:5 panel, mascot centred */
+  .hero-video { position: relative; inset: auto; aspect-ratio: 4 / 5; height: auto; object-position: 50% 40%; border-bottom: 2px solid var(--text); }
   .hero-shade { display: none; }
   .hero-content { padding-block: 28px 36px; }
   .hero-title { font-size: clamp(2.8rem, 14vw, 3.6rem); text-shadow: none; }
