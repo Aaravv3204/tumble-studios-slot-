@@ -85,6 +85,7 @@
     video.poster = video.getAttribute('data-' + name + '-poster');
     video.querySelector('source').src = video.getAttribute('data-' + name + '-mp4');
     video.load();
+    video.muted = true; // autoplay on phones requires muted, keep it set after load()
     if (!wasPaused) video.play().catch(function () {});
   }
 

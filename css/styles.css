@@ -600,16 +600,16 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 @media (max-width: 560px) {
   body { font-size: 1rem; }
   .brand-name { font-size: 1.05rem; }
-  /* phones: video sits above the text at full width, nothing covers the mascot */
-  .hero { display: block; min-height: 0; }
-  .hero::before, .hero::after { display: none; }
-  /* portrait video on phones: shown as a tall 4:5 panel, mascot centred */
-  .hero-video { position: relative; inset: auto; aspect-ratio: 4 / 5; height: auto; object-position: 50% 40%; border-bottom: 2px solid var(--text); }
-  .hero-shade { display: none; }
-  .hero-content { padding-block: 28px 36px; }
-  .hero-title { font-size: clamp(2.8rem, 14vw, 3.6rem); text-shadow: none; }
-  .hero-lead { text-shadow: none; }
-  .video-toggle { top: 12px; right: 12px; bottom: auto; width: 40px; height: 40px; }
+  /* phones: full-view hero, portrait video behind the text like on desktop */
+  .hero { min-height: min(88svh, 760px); }
+  .hero-video { object-position: 50% 30%; }
+  .hero-shade {
+    background:
+      linear-gradient(to top, rgba(20, 13, 8, .92) 0%, rgba(20, 13, 8, .55) 40%, rgba(20, 13, 8, 0) 68%);
+  }
+  .hero-content { padding-bottom: 72px; }
+  .hero-title { font-size: clamp(2.8rem, 14vw, 3.6rem); }
+  .video-toggle { width: 40px; height: 40px; right: 14px; bottom: 60px; }
   .hero-actions .btn { width: 100%; }
   .game-grid { grid-template-columns: 1fr; gap: 28px; }
   .game-card.is-featured .card-art { aspect-ratio: 4 / 3; }
