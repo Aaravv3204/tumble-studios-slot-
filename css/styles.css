@@ -227,17 +227,25 @@ ul[role="list"] { list-style: none; margin: 0; padding: 0; }
 }
 
 /* diagonal bottom edge, like a torn ticket, with the orange line following it */
+/* Two stacked wedges: an orange one, and a dark one 3px lower on top of it,
+   so only a 3px orange line shows along the cut. The cut rises to the right
+   by a fixed 38px whatever the screen width, so the line starts at the edge. */
+.hero::before,
 .hero::after {
   content: "";
   position: absolute;
-  left: -2%; right: -2%; bottom: -40px;
-  height: 72px;
-  background: var(--bg);
-  border-top: 3px solid var(--juice);
-  transform: skewY(-1.4deg);
-  transform-origin: bottom right;
+  left: 0; right: 0; bottom: 0;
+  height: 60px;
   z-index: 1;
   pointer-events: none;
+}
+.hero::before {
+  background: var(--juice);
+  clip-path: polygon(0 48px, 100% 10px, 100% 100%, 0 100%);
+}
+.hero::after {
+  background: var(--bg);
+  clip-path: polygon(0 51px, 100% 13px, 100% 100%, 0 100%);
 }
 
 /* hero text hugs the left edge so the video stays in view */
@@ -594,7 +602,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .brand-name { font-size: 1.05rem; }
   /* phones: video sits above the text at full width, nothing covers the mascot */
   .hero { display: block; min-height: 0; }
-  .hero::after { display: none; }
+  .hero::before, .hero::after { display: none; }
   /* portrait video on phones: shown as a tall 4:5 panel, mascot centred */
   .hero-video { position: relative; inset: auto; aspect-ratio: 4 / 5; height: auto; object-position: 50% 40%; border-bottom: 2px solid var(--text); }
   .hero-shade { display: none; }
