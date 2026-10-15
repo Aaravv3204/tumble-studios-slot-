@@ -237,27 +237,8 @@ ul[role="list"] { list-style: none; margin: 0; padding: 0; }
     linear-gradient(to right, rgba(10, 14, 22, .5), rgba(10, 14, 22, 0) 42%);
 }
 
-/* diagonal bottom edge, like a torn ticket, with the orange line following it */
-/* Two stacked wedges: an orange one, and a dark one 3px lower on top of it,
-   so only a 3px orange line shows along the cut. The cut rises to the right
-   by a fixed 38px whatever the screen width, so the line starts at the edge. */
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 60px;
-  z-index: 1;
-  pointer-events: none;
-}
-.hero::before {
-  background: var(--blue);
-  clip-path: polygon(0 48px, 100% 10px, 100% 100%, 0 100%);
-}
-.hero::after {
-  background: var(--bg);
-  clip-path: polygon(0 51px, 100% 13px, 100% 100%, 0 100%);
-}
+/* straight bottom edge: the marquee band sits directly under the video */
+.hero { border-bottom: 2px solid var(--text); }
 
 /* hero text hugs the left edge so the video stays in view */
 .hero-content {
@@ -308,7 +289,7 @@ ul[role="list"] { list-style: none; margin: 0; padding: 0; }
 
 .video-toggle {
   position: absolute;
-  right: 20px; bottom: 52px;
+  right: 20px; bottom: 20px;
   z-index: 2;
   width: 48px; height: 48px;
   border-radius: 50%;
@@ -337,7 +318,6 @@ ul[role="list"] { list-style: none; margin: 0; padding: 0; }
 /* Marquee strip */
 .marquee {
   overflow: hidden;
-  margin-top: 44px; /* clear gap below the hero frame */
   background: var(--ink);
   border-bottom: 2px solid var(--text);
   padding-block: 14px;
@@ -613,7 +593,6 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .brand-name { font-size: 1.05rem; }
   /* phones: landscape video shown whole at 16:9, headline and buttons centred on it */
   .hero { min-height: 0; aspect-ratio: 16 / 9; align-items: center; }
-  .hero::before, .hero::after { display: none; }
   .hero-shade { background: rgba(10, 14, 22, .42); }
   .hero-content { padding-block: 16px; text-align: center; }
   .hero-title { font-size: clamp(1.9rem, 9vw, 2.4rem); align-items: center; margin-bottom: 14px; text-shadow: 3px 3px 0 rgba(10, 14, 22, .6); }
@@ -623,7 +602,6 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .hero-actions .btn { min-height: 42px; padding: 0 14px; font-size: .8rem; box-shadow: 3px 3px 0 var(--sky), -2px -2px 0 var(--blue); }
   .video-toggle { width: 34px; height: 34px; right: 10px; bottom: 10px; }
   .video-toggle svg { width: 16px; height: 16px; }
-  .marquee { margin-top: 0; }
   .game-grid { grid-template-columns: 1fr; gap: 28px; }
   .game-card.is-featured .card-art { aspect-ratio: 4 / 3; }
   .contact-panel { padding: 22px; box-shadow: 6px 6px 0 var(--blue); }
