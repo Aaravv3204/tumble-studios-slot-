@@ -3,9 +3,9 @@
 
 :root {
   /* blue, white, black: from the Tumble Studios logo intro */
-  --bg: #0A0E16;
-  --bg-raised: #111828;
-  --line: #22304A;
+  --bg: #111B2E;         /* navy rather than black; a shade lighter */
+  --bg-raised: #192741;
+  --line: #2C3D60;
   --text: #F4F7FC;
   --white: #FFFFFF;
   --muted: #A7B4CA;
