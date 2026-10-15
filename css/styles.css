@@ -638,3 +638,68 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .btn, .game-card { transition: none; }
   .btn:hover, .game-card:hover { transform: none; }
 }
+
+/* ---- Blue / white / black --------------------------------------------------
+   Page sits on the logo intro's blue; cards and the contact panel are white
+   with black text; header, marquee and footer are black. Overrides the base
+   rules above, so the structure stays untouched. */
+:root {
+  --bg: #144C93;
+  --bg-raised: #FFFFFF;
+  --muted: #C7D6EE;            /* muted text on blue */
+  --sky: #8FC1FF;
+  --on-light: #0A0E16;
+  --on-light-muted: #4F5F7A;
+  --on-light-line: #DCE4F0;
+  --shadow-btn: 4px 4px 0 var(--white), -2px -2px 0 var(--sky);
+  --shadow-btn-hover: 6px 6px 0 var(--sky), -2px -2px 0 var(--white);
+}
+
+body {
+  background-color: #0C3F84;
+  /* the intro video's gradient: bright at the top centre, deep at the edges */
+  background-image: radial-gradient(120% 90% at 50% 0%, #1B579F 0%, #144C93 45%, #093A7D 100%);
+  background-attachment: fixed;
+}
+
+.btn-primary { background: var(--ink); color: var(--white); border-color: var(--white); }
+.btn-primary:hover { background: var(--sky); color: var(--ink); }
+.btn-primary:active { box-shadow: 2px 2px 0 var(--white); }
+.btn-small { box-shadow: 3px 3px 0 var(--sky); }
+.btn-small:hover { box-shadow: 5px 5px 0 var(--white); }
+
+.site-header { background: var(--ink); }
+
+/* hero wedge and marquee join into one black band under the video */
+.hero::before { background: var(--white); }
+.hero::after { background: var(--ink); }
+.marquee { margin-top: 0; }
+
+.game-card { background: var(--white); color: var(--on-light); border-color: var(--ink); box-shadow: 8px 8px 0 var(--ink); }
+.game-card:hover { box-shadow: 11px 11px 0 var(--white); }
+.game-card.is-placeholder { box-shadow: 8px 8px 0 var(--ink); }
+.game-card.is-placeholder:hover { box-shadow: 11px 11px 0 var(--white); }
+.card-art { border-bottom-color: var(--ink); }
+.card-art-blank { background: radial-gradient(circle at 50% 40%, rgba(27, 75, 147, .18), transparent 60%), #EEF3FB; }
+.card-art-blank img { opacity: .12; filter: brightness(0); }
+.card-body h3, .stats dd { color: var(--on-light); }
+.card-body p, .stats dt, .is-placeholder .stats dd { color: var(--on-light-muted); }
+.stats { border-top-color: var(--on-light-line); }
+.chips li { color: var(--on-light); border-color: #B9C6DA; }
+
+.contact-panel { background: var(--white); color: var(--on-light); border-color: var(--ink); box-shadow: 10px 10px 0 var(--ink); }
+.contact-copy p { color: var(--on-light-muted); }
+.contact-email { color: var(--blue); }
+.field label { color: var(--on-light); }
+input, select, textarea { border-color: var(--ink); }
+.form-note.is-ok { color: var(--blue); }
+.form-note.is-error { color: #C62828; }
+
+.site-footer { background: var(--ink); }
+.site-footer h3 { color: var(--sky); }
+.social a { box-shadow: 3px 3px 0 var(--sky); }
+.age-badge { background: var(--sky); }
+
+@media (max-width: 820px) {
+  .site-nav { background: var(--ink); }
+}
