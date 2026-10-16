@@ -616,3 +616,89 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .btn, .game-card { transition: none; }
   .btn:hover, .game-card:hover { transform: none; }
 }
+
+/* ---- One blue, white, black -------------------------------------------------
+   Doug's logo blue (#154DA2) is the page. White is text, buttons and lines.
+   Black is header, marquee, cards, panel, footer. No other shades of blue. */
+:root {
+  --bg: #154DA2;
+  --bg-raised: #0A0E16;
+  --line: rgba(255, 255, 255, .28);
+  --muted: rgba(255, 255, 255, .78);
+  --sky: #FFFFFF;
+  --blue-deep: #154DA2;
+  --shadow-btn: 4px 4px 0 var(--ink);
+  --shadow-btn-hover: 6px 6px 0 var(--ink);
+}
+
+body {
+  background-color: var(--bg);
+  background-image: none;
+}
+
+::selection { background: var(--ink); color: var(--white); }
+a { color: var(--white); }
+a:hover { color: var(--ink); }
+:focus-visible { outline-color: var(--white); }
+
+/* accent words in black on the blue page, blue on the black panel; white outline over the video */
+.accent { color: var(--ink); }
+.contact-panel .accent { color: var(--bg); }
+.hero-title .outline { -webkit-text-stroke-color: var(--white); }
+
+/* buttons: white with black shadow; hover flips to black */
+.btn-primary { background: var(--white); color: var(--ink); border-color: var(--ink); }
+.btn-primary:hover { background: var(--ink); color: var(--white); border-color: var(--white); }
+.btn-primary:active { box-shadow: 2px 2px 0 var(--ink); }
+.btn-ghost { background: rgba(10, 14, 22, .6); color: var(--white); border-color: var(--white); box-shadow: 4px 4px 0 var(--ink); }
+.btn-ghost:hover { background: var(--white); color: var(--ink); box-shadow: 6px 6px 0 var(--ink); }
+.btn-small { box-shadow: 3px 3px 0 var(--white); }
+.btn-small:hover { box-shadow: 5px 5px 0 var(--white); }
+
+/* header: black, white line on top */
+.site-header { background: var(--ink); border-top-color: var(--white); }
+.site-header::before { background: var(--white); }
+.brand-dot { color: var(--white); }
+.brand:hover { color: var(--white); }
+.site-nav ul a:hover, .site-nav ul a[aria-current="true"] { border-bottom-color: var(--white); color: var(--white); }
+.header-inner .btn-small { box-shadow: 3px 3px 0 var(--bg); border-color: var(--white); }
+
+/* marquee: black band, highlighted word reversed */
+.marquee { background: var(--ink); }
+.marquee-track span:nth-of-type(4n + 3) { color: var(--ink); background: var(--white); padding: 0 .35em; border-radius: 3px; }
+.video-toggle:hover { background: var(--white); color: var(--ink); }
+
+/* cards: black with white edges and a white hard shadow */
+.game-card { background: var(--ink); border-color: var(--white); box-shadow: 8px 8px 0 var(--ink); }
+.game-card:hover { box-shadow: 11px 11px 0 var(--white); }
+.game-card.is-placeholder { box-shadow: 8px 8px 0 var(--ink); }
+.game-card.is-placeholder:hover { box-shadow: 11px 11px 0 var(--white); }
+.card-art-blank { background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, .12), transparent 60%), var(--ink); }
+.card-art-blank img { opacity: .3; }
+.tag { background: var(--ink); color: var(--white); border-color: var(--white); }
+.tag-zest { background: var(--white); color: var(--ink); }
+.stats { border-top-color: rgba(255, 255, 255, .2); }
+.chips li { border-color: rgba(255, 255, 255, .45); }
+
+/* contact: black panel, white hard shadow, white fields */
+.contact-panel { background: var(--ink); border-color: var(--white); box-shadow: 10px 10px 0 var(--ink); }
+.contact-email { color: var(--white); }
+input, select, textarea { background-color: var(--white); color: var(--ink); border-color: var(--white); }
+input::placeholder, textarea::placeholder { color: #6B7280; }
+select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230A0E16'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 20px; }
+select option { background: var(--white); color: var(--ink); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline-color: var(--white); outline-offset: 3px; }
+.form-note.is-ok { color: var(--white); }
+
+/* footer: black */
+.site-footer { background: var(--ink); border-top-color: var(--white); }
+.site-footer h3 { color: var(--white); }
+.site-footer a:hover { color: var(--white); text-decoration: underline; }
+.footer-bottom { border-top-color: rgba(255, 255, 255, .2); }
+.social a { box-shadow: 3px 3px 0 var(--bg); }
+.social a:hover { background: var(--white); color: var(--ink); }
+.age-badge { background: var(--white); color: var(--ink); }
+
+@media (max-width: 820px) {
+  .site-nav { background: var(--ink); }
+}
