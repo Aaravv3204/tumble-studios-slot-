@@ -702,3 +702,12 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline-colo
 @media (max-width: 820px) {
   .site-nav { background: var(--ink); }
 }
+
+/* ---- Proportion: ~10% of the black surfaces turned white -------------------
+   The marquee band and the two placeholder art panels. Everything else as before. */
+.marquee { background: var(--white); color: var(--ink); }
+.marquee-track span:nth-of-type(4n + 3) { color: var(--white); background: var(--ink); }
+.marquee-track img { filter: brightness(0); opacity: 1; }
+
+.card-art-blank { background: radial-gradient(circle at 50% 40%, rgba(10, 14, 22, .08), transparent 60%), #F2F4F8; }
+.card-art-blank img { opacity: .18; filter: brightness(0); }
