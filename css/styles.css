@@ -634,7 +634,8 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 
 body {
   background-color: var(--bg);
-  background-image: none;
+  /* the diagonal grain, a touch stronger so it reads on the blue */
+  background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, .05) 0 2px, transparent 2px 7px);
 }
 
 ::selection { background: var(--ink); color: var(--white); }
