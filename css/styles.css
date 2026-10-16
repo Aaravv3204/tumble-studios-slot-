@@ -702,36 +702,3 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline-colo
 @media (max-width: 820px) {
   .site-nav { background: var(--ink); }
 }
-
-/* ---- White-forward -----------------------------------------------------------
-   Same three colours, but white carries the cards, the panel and the marquee;
-   black stays for header, footer and type on white. */
-.marquee { background: var(--white); color: var(--ink); }
-.marquee-track span:nth-of-type(4n + 3) { color: var(--white); background: var(--ink); }
-.marquee-track img { filter: brightness(0); opacity: 1; }
-
-.game-card { background: var(--white); color: var(--ink); border-color: var(--ink); box-shadow: 8px 8px 0 var(--ink); }
-.game-card:hover { box-shadow: 11px 11px 0 var(--white); }
-.game-card.is-placeholder { box-shadow: 8px 8px 0 var(--ink); }
-.game-card.is-placeholder:hover { box-shadow: 11px 11px 0 var(--white); }
-.card-art { border-bottom-color: var(--ink); }
-.card-art-blank { background: radial-gradient(circle at 50% 40%, rgba(10, 14, 22, .08), transparent 60%), #EEF1F6; }
-.card-art-blank img { opacity: .18; filter: brightness(0); }
-.tag { background: var(--ink); color: var(--white); border-color: var(--ink); }
-.tag-zest { background: var(--bg); color: var(--white); border-color: var(--white); }
-.card-body h3, .stats dd { color: var(--ink); }
-.card-body p, .stats dt, .is-placeholder .stats dd { color: #4B5563; }
-.stats { border-top-color: #D9DEE7; }
-.chips li { color: var(--ink); border-color: #B8C0CF; }
-
-.contact-panel { background: var(--white); color: var(--ink); border-color: var(--ink); box-shadow: 10px 10px 0 var(--ink); }
-.contact-copy p { color: #4B5563; }
-.contact-email { color: var(--ink); }
-.field label { color: var(--ink); }
-input, select, textarea { border-color: var(--ink); }
-.contact-art { border-color: var(--ink); box-shadow: 6px 6px 0 var(--ink); }
-.contact-panel .btn-primary { background: var(--ink); color: var(--white); border-color: var(--ink); box-shadow: 4px 4px 0 var(--bg); }
-.contact-panel .btn-primary:hover { background: var(--bg); color: var(--white); border-color: var(--bg); box-shadow: 6px 6px 0 var(--ink); }
-.contact-panel .accent { color: var(--bg); }
-.form-note.is-ok { color: var(--bg); }
-.form-note.is-error { color: #B91C1C; }
