@@ -684,7 +684,9 @@ a:hover { color: var(--ink); }
 
 /* contact: black panel, white hard shadow, white fields */
 .contact-panel { background: var(--ink); border-color: var(--white); box-shadow: 10px 10px 0 var(--ink); }
-.contact-email { color: var(--white); }
+/* email link: stays white on the black panel, underline on hover like the footer links */
+.contact-email { color: var(--white); text-decoration: none; text-underline-offset: .2em; }
+.contact-email:hover, .contact-email:focus-visible { color: var(--white); text-decoration: underline; }
 input, select, textarea { background-color: var(--white); color: var(--ink); border-color: var(--white); }
 input::placeholder, textarea::placeholder { color: #6B7280; }
 select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230A0E16'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 20px; }
