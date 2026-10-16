@@ -9,9 +9,9 @@
   --text: #F4F7FC;
   --white: #FFFFFF;
   --muted: #A7B4CA;
-  --blue: #1B4B93;       /* sampled from Doug's logo */
-  --blue-deep: #10316A;
-  --sky: #1B4B93;        /* Doug's logo blue, used wherever the light blue was */
+  --blue: #154DA2;       /* Doug's logo blue, sampled from the full-size avatar */
+  --blue-deep: #0E3578;
+  --sky: #154DA2;
   --ink: #0A0E16;
 
   --font-display: "Bowlby One", "Arial Black", Impact, sans-serif;
