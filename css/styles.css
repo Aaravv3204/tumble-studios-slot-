@@ -702,20 +702,3 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline-colo
 @media (max-width: 820px) {
   .site-nav { background: var(--ink); }
 }
-
-/* ---- Tone test: black lifted 10% toward white, whites 10% stronger ---------- */
-:root {
-  --ink: #232730;                        /* #0A0E16 mixed 10% with white */
-  --bg-raised: #232730;
-  --text: #FFFFFF;
-  --muted: rgba(255, 255, 255, .88);
-  --line: rgba(255, 255, 255, .38);
-}
-.stats { border-top-color: rgba(255, 255, 255, .3); }
-.chips li { border-color: rgba(255, 255, 255, .55); }
-.footer-bottom { border-top-color: rgba(255, 255, 255, .3); }
-.hero-shade {
-  background:
-    linear-gradient(to top, rgba(35, 39, 48, .9) 0%, rgba(35, 39, 48, .45) 35%, rgba(35, 39, 48, 0) 62%),
-    linear-gradient(to right, rgba(35, 39, 48, .5), rgba(35, 39, 48, 0) 42%);
-}
