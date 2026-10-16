@@ -3,6 +3,15 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  // --- Logo = home: scroll to the very top and clear any #hash from the URL
+  Array.prototype.forEach.call(document.querySelectorAll('.brand'), function (brand) {
+    brand.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    });
+  });
+
   // --- Mobile nav
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');

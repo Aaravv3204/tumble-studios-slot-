@@ -34,6 +34,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 /* keep anchored sections clear of the sticky header */
 [id] { scroll-margin-top: 84px; }
+#top { scroll-margin-top: 0; }
 
 body {
   margin: 0;
