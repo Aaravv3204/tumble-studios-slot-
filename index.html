@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261025">
+  <link rel="stylesheet" href="css/styles.css?v=20261031">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -35,6 +35,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="#games">Games</a></li>
+          <li><a href="juice-up.html">Juice Up</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a class="btn btn-primary btn-small" href="#contact">Get in touch</a>
@@ -44,9 +45,9 @@
 
   <main id="main">
 
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
-      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+    <!-- Hero: the studio logo intro plays once and holds on the finished logo -->
+    <section class="hero hero--intro" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted playsinline preload="auto" poster="assets/hero-poster.jpg">
         <source src="assets/hero.mp4" type="video/mp4">
       </video>
       <div class="hero-shade"></div>
@@ -56,7 +57,6 @@
           <span class="line" data-cascade aria-hidden="true">Built to</span>
           <span class="line outline" data-cascade aria-hidden="true">tumble.</span>
         </h1>
-        <p class="hero-lead">Character-led slot games, designed, animated and mathed in-house. Our first title, Juice Up, is coming soon.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#games">See the games</a>
           <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -98,7 +98,7 @@
               <span class="tag tag-zest">Coming soon</span>
             </div>
             <div class="card-body">
-              <h3>Juice Up</h3>
+              <h3><a class="card-link" href="juice-up.html">Juice Up</a></h3>
               <p>A Stackways slot at a beach bar. Stacked symbols expand to fill their reels, opening up more ways to win on every spin. RTP and max win announced at launch.</p>
               <dl class="stats">
                 <div><dt>RTP</dt><dd>TBA</dd></div>
@@ -109,6 +109,7 @@
                 <li>Stackways</li>
                 <li>Ways to win</li>
               </ul>
+              <span class="btn btn-primary btn-small card-cta" aria-hidden="true">Explore the game</span>
             </div>
           </li>
 
@@ -216,6 +217,7 @@
         <h3>The site</h3>
         <ul>
           <li><a href="#games">Games</a></li>
+          <li><a href="juice-up.html">Juice Up</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -232,6 +234,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261025" defer></script>
+  <script src="js/main.js?v=20261031" defer></script>
 </body>
 </html>

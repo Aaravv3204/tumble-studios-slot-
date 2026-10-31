@@ -3,8 +3,9 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  // --- Logo = home: scroll to the very top and clear any #hash from the URL
-  Array.prototype.forEach.call(document.querySelectorAll('.brand'), function (brand) {
+  // --- Logo = home: on the homepage, scroll to the very top and clear any #hash.
+  // On other pages the logo is a normal link back to the homepage.
+  Array.prototype.forEach.call(document.querySelectorAll('.brand[href^="#"]'), function (brand) {
     brand.addEventListener('click', function (e) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
@@ -73,7 +74,9 @@
     }
   });
 
-  // --- Hero video: pause button, reduced motion, and stop when off screen
+  // --- Hero video: pause button, reduced motion, and stop when off screen.
+  // A video without `loop` (the homepage logo intro) plays once and holds on its
+  // last frame; the button then becomes a replay button.
   var video = document.querySelector('.hero-video');
   var videoToggle = document.querySelector('.video-toggle');
 
@@ -93,14 +96,25 @@
     }
 
     videoToggle.addEventListener('click', function () {
+      if (video.ended) {
+        video.currentTime = 0;
+        userPaused = false;
+        setPaused(false);
+        return;
+      }
       userPaused = !userPaused;
       setPaused(userPaused);
+    });
+
+    video.addEventListener('ended', function () {
+      videoToggle.setAttribute('aria-pressed', 'true');
+      videoToggle.setAttribute('aria-label', 'Replay intro');
     });
 
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (userPaused) return;
+          if (userPaused || video.ended) return;
           if (entry.isIntersecting) video.play().catch(function () {});
           else video.pause();
         });
